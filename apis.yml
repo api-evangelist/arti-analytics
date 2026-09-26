@@ -1,23 +1,72 @@
 aid: arti-analytics
+
 name: ARTI Analytics
-description: 'ARTI Analytics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://artianalytics.com/assets/social/arti-social-preview-v1.jpg
+
+description: 'ARTI Analytics provides an enterprise AI platform offering solutions such as AI security & governance, DSML model development, and AI applications. Their flagship product ARTI Dominion acts as a control layer to enforce policy across models, agents, and tools in real time, delivering audit‑proof records. The company also delivers custom AI models, data science pipelines, and consulting services to help enterprises adopt trustworthy AI at scale.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arti-analytics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable spec found; attempts to fetch common spec URLs returned 404.
+  evidence:
+    - url: https://api.artianalytics.com/openapi.json
+      status: 404
+  checked: 2026-09-26
+
 tags:
 - Company
-apis: []
+- AI
+- Enterprise
+- Platform
+- Security
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arti-analytics-hosts.yml
+- type: TrustCenter
+  url: https://www.artianalytics.com/company/trust-center
+- type: DomainSecurity
+  url: security/arti-analytics-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.artianalytics.com/
+- type: AboutUs
+  url: https://www.artianalytics.com/company/about-us
+- type: Careers
+  url: https://www.artianalytics.com/company/careers
+- type: Investors
+  url: https://www.artianalytics.com/company/investors
+- type: Newsroom
+  url: https://www.artianalytics.com/company/newsroom
+- type: PrivacyPolicy
+  url: https://www.artianalytics.com/company/privacy-policy
+
+apis: []
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
